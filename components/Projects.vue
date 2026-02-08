@@ -96,7 +96,7 @@ const projects = [
     description:
       'Flight ticket booking platform developed during MSIB Binar program. Implemented responsive booking flows, search functionality, and dynamic UI components for ticket selection and checkout process.',
     tags: ['JavaScript', 'React', 'Tailwind CSS', 'headless UI'],
-    image: '/images/Web_flyket.png',
+    image: '/images/Web_Flyket.png',
     accent: 'from-pastel-lavender/20 to-pastel-sky/20',
   }
 ]
