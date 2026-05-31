@@ -14,30 +14,36 @@
         Technologies I work with.
       </h2>
 
-      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <div
           v-for="category in skillCategories"
           :key="category.title"
           data-animate
-          class="glass group rounded-2xl p-8 opacity-0 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          class="glass group relative overflow-hidden rounded-3xl border border-border/40 p-8 opacity-0 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-border/80 hover:shadow-2xl hover:shadow-accent/10"
         >
-          <div class="mb-6 flex items-center gap-2.5">
-            <span 
-              :class="['h-2 w-2 rounded-full transition-all duration-300 group-hover:scale-150', category.dotColor]" 
-            />
-            <h3 class="text-sm font-medium uppercase tracking-wider text-foreground transition-colors duration-300 group-hover:text-accent">
-              {{ category.title }}
-            </h3>
+          <!-- Subtle background gradient on hover -->
+          <div class="absolute inset-0 bg-gradient-to-br from-foreground/[0.02] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+          
+          <div class="relative z-10">
+            <div class="mb-6 flex items-center gap-3">
+              <span 
+                :class="['h-2.5 w-2.5 rounded-full shadow-sm transition-all duration-500 group-hover:scale-[1.5]', category.dotColor]" 
+              />
+              <h3 class="text-sm font-semibold uppercase tracking-widest text-foreground transition-colors duration-300 group-hover:text-accent">
+                {{ category.title }}
+              </h3>
+            </div>
+            
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                v-for="skill in category.skills"
+                :key="skill"
+                class="cursor-default rounded-full border border-border/50 bg-background/50 px-3.5 py-1.5 text-sm text-muted-foreground backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/30 hover:bg-foreground/[0.03] hover:text-foreground hover:shadow-sm"
+              >
+                {{ skill }}
+              </span>
+            </div>
           </div>
-          <ul class="flex flex-col gap-3">
-            <li
-              v-for="skill in category.skills"
-              :key="skill"
-              class="text-sm text-muted-foreground transition-all duration-200 hover:translate-x-1 hover:text-foreground"
-            >
-              {{ skill }}
-            </li>
-          </ul>
         </div>
       </div>
     </div>

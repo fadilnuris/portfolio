@@ -98,6 +98,14 @@ const projects = [
     tags: ['JavaScript', 'React', 'Tailwind CSS', 'headless UI'],
     image: '/images/Web_Flyket.png',
     accent: 'from-pastel-lavender/20 to-pastel-sky/20',
+  },
+  {
+    title: 'Flowfund Budgeting Website',
+    description:
+      'A comprehensive personal finance and budgeting platform. The frontend features a dynamic Nuxt.js/Vue.js interface with Tailwind CSS and ApexCharts for intuitive transaction tracking and data visualization. The custom backend API is built from scratch using Go (Golang) and the Gin framework, utilizing GORM with a PostgreSQL database for robust data management and secure transactions.',
+    tags: ['Vue.js','Nuxt.js','Tailwind CSS','Go (Golang)', 'Gin Framework','GORM', 'PostgreSQL','Full-Stack'],
+    image: '/images/Web_Flowfund.png',
+    accent: 'from-pastel-pink/20 to-pastel-lavender/20',
   }
 ]
 
